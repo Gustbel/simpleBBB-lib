@@ -42,3 +42,15 @@ void set_GPIO_direction(int gpio, int d) //        0 - OUTPUT      ----      1 -
 	}
     close(f);
 }
+
+void set_GPIO_value(int gpio, bool l) //        false - Low      ----      true - High
+{
+	f = open(path(gpio, "value"), O_RDWR);
+	
+	if (l)
+    	write(f, "1", 1);
+	else
+    	write(f, "0", 1);
+    	
+    close(f);
+}

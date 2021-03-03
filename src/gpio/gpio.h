@@ -5,5 +5,6 @@
 #include <stdbool.h>
 
 void set_GPIO_direction(int, int);
+void set_GPIO_value(int, bool);
 
 #endif
