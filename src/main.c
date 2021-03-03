@@ -13,9 +13,11 @@ int main () {
 	for (int i=0; i<10; i++)
 	{
 		set_GPIO_value(60,true);
-		usleep(1000);
+		read_GPIO_value(60);
+		usleep(1000000);
 		set_GPIO_value(60,false);
-		usleep(1000);
+		read_GPIO_value(60);
+		usleep(1000000);
 	}
 	
 	return 0;

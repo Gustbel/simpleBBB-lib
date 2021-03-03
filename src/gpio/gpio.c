@@ -9,6 +9,7 @@ char buffer[64];
 char aux_int[8];
 char* s;
 int f;
+char value;
 
 char* path(int gpio, char* file) 
 {
@@ -53,4 +54,13 @@ void set_GPIO_value(int gpio, bool l) //        false - Low      ----      true 
     	write(f, "0", 1);
     	
     close(f);
+}
+
+int read_GPIO_value(int gpio) //        Read GPIO value   --   0 (Low) or 1 (High)
+{
+	f = open(path(gpio, "value"), O_RDONLY, 0);
+	
+    read(f, &value, 1);
+	
+	return value;
 }
