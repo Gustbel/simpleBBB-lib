@@ -12,10 +12,11 @@ int main () {
 	for (int i=0; i<10; i++)
 	{
 		set_GPIO_value(60,true);
-		read_GPIO_value(60);
+		printf("%d\n", read_GPIO_value(60));
 		usleep(1000000);
+		
 		set_GPIO_value(60,false);
-		read_GPIO_value(60);
+		printf("%d\n", read_GPIO_value(60));
 		usleep(1000000);
 	}
 
