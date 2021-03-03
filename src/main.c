@@ -7,7 +7,7 @@
 
 int main () {
 
-	set_GPIO_direction(60, 0)
-	printf ("set_direction GPIO 60 -> Output"));
+	set_GPIO_direction(60, 0);
+	printf ("set_direction GPIO 60 -> Output\n\n");
 	return 0;
 }
