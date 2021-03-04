@@ -25,7 +25,7 @@ char* path(int gpio, char* file)
   return s;	// Return the path
 }
 
-void set_GPIO_direction(int gpio, int d) //        0 - OUTPUT      ----      1 - INPUT
+void simpleBBB_GPIOset(int gpio, int d) //  	Set Direction     0 - OUTPUT      ----      1 - INPUT
 {
 	f = open(path(gpio, "direction"), O_RDWR);
 	switch (d)
@@ -42,7 +42,7 @@ void set_GPIO_direction(int gpio, int d) //        0 - OUTPUT      ----      1 -
     close(f);
 }
 
-void set_GPIO_value(int gpio, bool l) //        false - Low      ----      true - High
+void simpleBBB_GPIOwrite(int gpio, bool l) //   Write Digital Logic    false - Low      ----      true - High
 {
 	f = open(path(gpio, "value"), O_RDWR);
 
@@ -54,7 +54,7 @@ void set_GPIO_value(int gpio, bool l) //        false - Low      ----      true 
     close(f);
 }
 
-int read_GPIO_value(int gpio) //        Read GPIO value   --   0 (Low) or 1 (High)
+int simpleBBB_GPIOread(int gpio) //     Read GPIO value      0 (Low)    ----     1 (High)
 {
 	f = open(path(gpio, "value"), O_RDONLY, 0);
     read(f, &value, 1);

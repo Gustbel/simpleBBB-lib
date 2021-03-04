@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void set_GPIO_direction(int, int);
-void set_GPIO_value(int, bool);
-int read_GPIO_value(int gpio);
+void simpleBBB_GPIOset(int, int);
+void simpleBBB_GPIOwrite(int, bool);
+int simpleBBB_GPIOread(int gpio);
 
 #endif
