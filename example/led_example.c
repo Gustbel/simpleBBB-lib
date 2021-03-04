@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "gpio/gpio.h"
+#include <simpleBBB_GPIO.h>
 
 int main () {
 	set_GPIO_direction(60, 0);
