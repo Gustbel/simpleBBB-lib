@@ -17,7 +17,7 @@ extern int simpleBBB_I2CWriteReg8      (int fd, int reg, int data) ;
 extern int simpleBBB_I2CWriteReg16     (int fd, int reg, int data) ;
 
 extern int simpleBBB_I2CSetupInterface (const char *device, int devId) ;
-extern int simpleBBB_I2CSetup          (const int devId) ;
+extern int simpleBBB_I2CSetup          (const int p, const int devId) ;
 
 #ifdef __cplusplus
 }

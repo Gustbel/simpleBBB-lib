@@ -175,11 +175,13 @@ int simpleBBB_I2CSetupInterface (const char *device, int devId)
  *********************************************************************************
  */
 
-int simpleBBB_I2CSetup (const int devId)
+int simpleBBB_I2CSetup (const int p, const int devId)
 {
+  char tbuf[11];
   const char *device ;
 
-  device = "/dev/i2c-2" ;
+  sprintf(tbuf, "/dev/i2c-%d", p);
+  device = tbuf;
 
-  return simpleBBB_I2CSetupInterface (device, devId) ;
+  return simpleBBB_I2CSetupInterface (device, devId);
 }
